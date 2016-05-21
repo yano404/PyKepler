@@ -1,6 +1,6 @@
 PyKepler
 ========
-PyKepler is simulator of gravitational n-body problem._
+PyKepler is simulator of gravitational n-body problem.
 
 This is Under construction now.
 
@@ -8,3 +8,6 @@ This is Under construction now.
 * PyQt4
 * PyQtGraph
 * numpy
+
+## License
+GPL
