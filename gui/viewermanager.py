@@ -30,7 +30,7 @@ class Ui_ViewerManager(object):
         self.centralwidget.setObjectName(_fromUtf8("centralwidget"))
         self.verticalLayout = QtGui.QVBoxLayout(self.centralwidget)
         self.verticalLayout.setObjectName(_fromUtf8("verticalLayout"))
-        self.treeView_PlanetAttribute = QtGui.QTreeView(self.centralwidget)
+        self.treeView_PlanetAttribute = AttributeView(self.centralwidget)
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -115,3 +115,12 @@ class Ui_ViewerManager(object):
         self.actionLoad.setText(_translate("ViewerManager", "Load", None))
         self.actionAbout_Kepler_Viewer.setText(_translate("ViewerManager", "About Kepler Viewer", None))
 
+class AttributeView(QtGui.QTreeView):
+    def __init__(self, parent=None):
+        super(AttributeView, self).__init__(parent)
+        self.setItemsExpandable(False)
+        self.setIndentation(0)
+        self.setSelectionMode(QtGui.QAbstractItemView.ExtendedSelection)
+
+    def drawBranches(self, painter, rect, index):
+        return
